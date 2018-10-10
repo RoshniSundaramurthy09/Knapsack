@@ -1,0 +1,14 @@
+Package: Knapsack
+Type: Package
+Title: This package is created to solve knapsack problem.
+Version: 1.0
+Date: 2018-10-01
+Author: Roshni, Mariano and Pedram
+Maintainer: <rossu809@student.liu.se>
+Description: This package has multiple functions to solve the knapsack problem with different run times.
+License: GPL-2 
+RoxygenNote: 6.1.0
+LazyData: true
+Encoding: UTF-8
+Suggests: knitr, rmarkdown, testthat
+VignetteBuilder: knitr
