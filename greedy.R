@@ -8,18 +8,17 @@ knapsack_objects <-
 
 
 
-greedy_knapsack <- function(Z,W){
-      X<- Z
-       X <- transform(X, c= v/w )
-       X<- X[order(X$c,decreasing = TRUE),]
+greedy_knapsack <- function(X,W){
+       df <- transform(X, c= v/w )
+       df<- df[order(df$c,decreasing = TRUE),]
        w8  <- vector()
        j=0
        Val <- vector()
        elements <- vector()
          while(sum(w8) <= W)
            {
-           w8 <-  append(w8,X$w[j])
-           Val <- append(Val,X$v[j])
+           w8 <-  append(w8,df$w[j])
+           Val <- append(Val,df$v[j])
            j <- j+1
            
          }
@@ -30,7 +29,7 @@ greedy_knapsack <- function(Z,W){
          Val <- head(Val,-1)
        }
        Val
-       elements <- append(elements,which(Z$w  %in% w8))
+       elements <- append(elements,which(X$w  %in% w8))
        results <- list("value"= sum(Val),"elements"=elements,"weight"=sum(w8))
        return(results)
        
@@ -42,5 +41,5 @@ greedy_knapsack <- function(Z,W){
 
 
 
-greedy_knapsack(Z = knapsack_objects[1:800,], W = 3500)
+greedy_knapsack(X = knapsack_objects[1:800,], W = 3500)
 
