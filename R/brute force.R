@@ -1,3 +1,4 @@
+#using proc.time() for n=16 it took: User:25.694. System:0.414. Elapsed:29.748
 brute_force_knapsack <- function(x,W)
 {stopifnot(is.data.frame(x),is.numeric(W))
   value <- 0
