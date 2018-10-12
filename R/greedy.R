@@ -1,5 +1,6 @@
+
 set.seed(42)
-n <- 2000
+n <- 1000000
 knapsack_objects <-
   data.frame(
     w=sample(1:4000, size = n, replace = TRUE),
@@ -40,6 +41,10 @@ greedy_knapsack <- function(X,W){
 #greedy_knapsack(Z = knapsack_objects[1:1200,], W = 2000)
 
 
+#ptm <- proc.time()
+#greedy_knapsack(X = knapsack_objects[1:1000000,], W = 3500)
+#proc.time() - ptm
 
-greedy_knapsack(X = knapsack_objects[1:800,], W = 3500)
-
+# time
+#user  system elapsed 
+#1.22    0.04    1.27 
