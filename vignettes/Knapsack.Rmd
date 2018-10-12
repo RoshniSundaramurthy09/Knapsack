@@ -88,10 +88,10 @@ knapsack_dynamic(x = knapsack_objects[1:8,], W = 2000)
 ### Run time calculation
 
 ```{r}
-library(tictoc)
-tic()   # refer https://www.r-bloggers.com/5-ways-to-measure-running-time-of-r-code/
-knapsack_dynamic(x = knapsack_objects[1:8,], W = 2000)
-toc()
+#library(tictoc)
+#tic()   # refer https://www.r-bloggers.com/5-ways-to-measure-running-time-of-r-code/
+#knapsack_dynamic(x = knapsack_objects[1:8,], W = 2000)
+#toc()
 ```
 
 ### References
